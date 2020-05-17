@@ -1,0 +1,24 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/Gid-Back
+    username: postgres
+    password: 123456789
+    driverClassName: org.postgresql.Driver
+
+security:
+  jwt:
+    token:
+      secret-key: jwt-gidservice-token
+      expire-length: 3600000
+
+server:
+  port: 8083
